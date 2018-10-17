@@ -12,8 +12,10 @@ public class EmployeeDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
-	public void createEmpoyee(Employee employee) {
-		Session session = sessionFactory.openSession();
+	public void createEmployee(Employee employee) {
+		Session session = null;
+		
+		session = sessionFactory.openSession();
 		session.beginTransaction();
 		session.save(employee);
 		session.getTransaction().commit();
