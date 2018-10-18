@@ -1,11 +1,7 @@
 package org.shyu.springboot.model;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -20,8 +16,8 @@ public class Employee {
 	@Column(name="name")
 	private String name;
 	
-	@Column(name="date_of_joining")
-	private Date doj;
+	//@Column(name="date_of_joining")
+	//private Date doj;
 	
 	@Column(name="salary")
 	private double salary;
@@ -38,12 +34,12 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Date getDoj() {
+	/*public Date getDoj() {
 		return doj;
 	}
 	public void setDoj(Date doj) {
 		this.doj = doj;
-	}
+	}*/
 	public double getSalary() {
 		return salary;
 	}

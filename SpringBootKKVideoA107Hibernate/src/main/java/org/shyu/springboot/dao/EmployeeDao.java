@@ -14,10 +14,13 @@ public class EmployeeDao {
 	
 	public void createEmployee(Employee employee) {
 		Session session = null;
-		
-		session = sessionFactory.openSession();
-		session.beginTransaction();
-		session.save(employee);
-		session.getTransaction().commit();
+		try {
+			session = sessionFactory.openSession();
+			session.beginTransaction();
+			session.save(employee);
+			session.getTransaction().commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

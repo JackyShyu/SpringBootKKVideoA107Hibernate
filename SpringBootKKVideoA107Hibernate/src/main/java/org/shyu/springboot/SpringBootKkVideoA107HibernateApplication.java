@@ -1,7 +1,5 @@
 package org.shyu.springboot;
 
-import java.util.Date;
-
 import org.shyu.springboot.model.Employee;
 import org.shyu.springboot.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +21,7 @@ public class SpringBootKkVideoA107HibernateApplication implements CommandLineRun
 	public void run(String... args) throws Exception {
 		Employee employee = new Employee();
 		employee.setName("Jacky");
-		employee.setDoj(new Date());
+		//employee.setDoj(new Date());
 		employee.setSalary(5000);
 		employeeService.createEmployee(employee);
 	}
